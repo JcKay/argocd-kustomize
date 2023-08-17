@@ -11,7 +11,7 @@ spec:
   secureSettings:
   - secretName: s3-credentials
 
-  version: 8.9.0
+  version: 8.8.0
 
   nodeSets:
   - name: default
