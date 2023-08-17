@@ -1,12 +1,12 @@
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
-  name: base
+  name: default
 spec:
   nodeSets:
     - name: default
       count: 3
-      configK:
+      config:
         node.roles: ["master", "data", "ingest", "transform"]
       podTemplate:
         spec:
