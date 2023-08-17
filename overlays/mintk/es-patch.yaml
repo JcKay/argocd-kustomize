@@ -6,7 +6,7 @@ spec:
   nodeSets:
 #    - name: default
 #      count: 3
-#      config:
+#      configK:
 #        node.roles: ["master", "data", "ingest", "transform"]
       podTemplate:
         spec:
