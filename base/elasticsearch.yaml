@@ -8,6 +8,7 @@ spec:
     tls:
       selfSignedCertificate:
         disabled: true
+    max_content_length: 500mb
   secureSettings:
   - secretName: s3-credentials
 
