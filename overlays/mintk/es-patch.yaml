@@ -4,14 +4,18 @@ metadata:
   name: base
 spec:
   nodeSets:
-    podTemplate:
-      spec:
-        containers:
-        - name: elasticsearch
-          resources:
-            limits:
-              memory: 2Gi
-              cpu: 1
-          env:
-            - name: ES_JAVA_OPTS
-              value: "-Xms1g -Xmx1g"
+    - name: default
+      count: 3
+      config:
+        node.roles: ["master", "data", "ingest", "transform"]
+      podTemplate:
+        spec:
+          containers:
+            - name: elasticsearch
+              resources:
+                limits:
+                  memory: 2Gi
+                  cpu: 1
+              env:
+                - name: ES_JAVA_OPTS
+                  value: "-Xms1g -Xmx1g"
