@@ -4,10 +4,10 @@ metadata:
   name: base
 spec:
   nodeSets:
-#    - name: default
-#      count: 3
-#      configK:
-#        node.roles: ["master", "data", "ingest", "transform"]
+    - name: default
+      count: 3
+      configK:
+        node.roles: ["master", "data", "ingest", "transform"]
       podTemplate:
         spec:
           containers:
