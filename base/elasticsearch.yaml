@@ -18,7 +18,6 @@ spec:
     count: 3
     config:
       node.roles: ["master", "data", "ingest", "transform"]
-      # node.remote_cluster_client: false
     podTemplate:
       spec:
         containers:
